@@ -11,5 +11,5 @@ def paginate_users(page_size, offset):
     return rows
 
 def lazy_paginate(page_size):
-    for x in page_size:
-        yield paginate_users(x, 0)
+    for x in paginate_users(page_size, 0):
+        yield x
